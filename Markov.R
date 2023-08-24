@@ -25,22 +25,9 @@ EN <- change_pext_time(0.2, 20, 1)
 # critically endangered: >50% in 10 years
 CR <- change_pext_time(0.50, 10, 1)
 
-### Code Outline ###
-
-# isolate all species into IUCN state
-
-# cummulative matrix
-
-# runif determines which category they change to
-
-#data.entry(M)
-#for (i in 1:6){
-#  M[i,i] <- 1 - sum(M[-i,i])
-#}
-#save(M, file = "eg_transition_M.rda")
-
 ## function to calculate distribution of red list statuses
 # table is dataframe displaying Red List Status of Each Species
+
 state_distr <- function(status_table){
   freqs <- table(status_table$Status)
   freq_vec <- rep(0,6)
